@@ -15,6 +15,6 @@ jobs:
       - name: OSWASP ZAP - Vulnerability Scan
         uses: zaproxy/action-full-scan@6eade0f93b10fad8cfb4e63b979703a2cbd0cc98 # v0.4.0
         with:
-          allow_issue_writing: false
+          allow_issue_writing: true
           cmd_options: '-d -s -z "-config globalexcludeurl.url_list.url.regex=^.*/(support|contactus|contact|careers|carrieres)/?$"'
           target: ${{ matrix.domain }}
