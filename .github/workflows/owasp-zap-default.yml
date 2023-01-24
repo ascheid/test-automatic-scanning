@@ -1,7 +1,8 @@
 name: Runs OWASP ZAP full scans
 on:
   workflow_dispatch:
-
+permissions:
+  issues: write
 jobs:
   oswasp-zap:
     runs-on: ubuntu-latest
